@@ -4,3 +4,9 @@
 #navbar-gap{
   margin-top: -2%;
 }
+
+.img-thumbnail{
+  border-width: 0;
+  border-radius: 50% !important;
+  margin: 20px auto auto auto !important
+}

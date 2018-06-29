@@ -1,6 +1,19 @@
 <%- layout('layout') -%>
+<div class="card m-auto" style="width: 25rem;">
+  <img src="<%= user.profile.picture %>" alt="img here" class="img-thumbnail">
+  <div class="card-body">
+    <div class="container ">
+      <br>
+      <p>Name: <%= user.profile.name %></p>
+      <p>Email: <%= user.email %></p>
+      <% if(user.address === '' || typeof user.address ==='undefined') { %>
+        <p>address: <span style="color: #c0392b; font-weight: bold">you have no address </span> </p>
+      <% } else{ %>
+        <p>Address: <%= user.address %></p>
+      <% } %>
 
-<div class="container ">
-  <h2><%= user.profile.name %> logged in</h2>
 
+      <a href="/edit-profile" class="btn btn-primary btn-lg">Edit profile</a>
+    </div>
+  </div>
 </div>
